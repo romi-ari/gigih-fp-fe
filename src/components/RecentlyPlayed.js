@@ -9,7 +9,7 @@ function RecentlyPlayed() {
         <>
             <div className="mb-10">
                 <div>
-                    <h1 className="text-white text-2xl font-medium mb-5">Recent played</h1>
+                    <h1 className="text-white text-2xl font-medium mb-5">Recently played</h1>
                 </div>
                 <Cards Album={Album} />
             </div>
