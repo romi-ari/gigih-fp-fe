@@ -1,8 +1,8 @@
 /*eslint-disable*/
 
 import React from 'react'
-import Cards from './Card'
-import { Album } from '../Album'
+import Cards from '../Card'
+import { Album } from '../../Album'
 
 function AllSong() {
     return(

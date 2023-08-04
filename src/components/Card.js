@@ -10,7 +10,7 @@ function Cards({Album}) {
                             <div className="flex flex-col gap-1 p-4 w-[190px] h-[280] rounded-lg shadow-md bg-[#1f1f1f]">
                                 <img className="w-auto h-44 mb-2 rounded-xl shadow-md" src={album.img} />
                                 <h2 className="truncate text-white">{album.title}</h2>
-                                <p className="truncate indent-1 text-gray-400">
+                                <p className="truncate text-gray-400">
                                     {Array.isArray(album.description) ? album.description.join(', ') : album.description}
                                 </p>
                             </div>     

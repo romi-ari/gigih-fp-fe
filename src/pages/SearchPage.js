@@ -1,7 +1,7 @@
 /*eslint-disable*/
 
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar/Navbar'
 import User from '../components/User'
 import Search from '../components/Search'
 
