@@ -8,7 +8,7 @@ function RecommendSong() {
 
     function handleRecommendSong() {
       
-      const searchEndpoint = `https://api.spotify.com/v1/recommendations?seed_artists=4NHQUGzhtTLFvgF5SZesLK&seed_genres=classical%2Ccountry&seed_tracks=0c6xIDDpzE81m2q797ordA`;
+      const searchEndpoint = "https://api.spotify.com/v1/recommendations?seed_artists=4NHQUGzhtTLFvgF5SZesLK&seed_genres=classical%2Ccountry&seed_tracks=0c6xIDDpzE81m2q797ordA";
       fetch(searchEndpoint, {
         headers: { Authorization: `Bearer ${accessToken}` },
       })
@@ -38,7 +38,7 @@ function RecommendSong() {
                     <h1 className="text-white text-2xl font-medium mb-5">
                         Recommend for you
                         <button onClick={handleRecommendSong} className="ml-2 bg-gray-800 text-white px-3 py-1 rounded-md">
-                        Refresh
+                          Refresh
                         </button>
                     </h1>
                     <ul className="mt-5 flex flex-wrap gap-6 mb-4">
