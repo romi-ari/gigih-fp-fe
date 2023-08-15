@@ -1,15 +1,14 @@
 import React from 'react'
-import {Route, Routes} from 'react-router-dom'
+import { Route, Routes, Navigate} from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import SearchPage from './pages/SearchPage'
-import LoginPage from './components/Login'
+import VideoDetailPage from './pages/VideoDetailPage'
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<LoginPage />} />
+      <Route path="/" element={<Navigate to="/home" />} />
       <Route path="/home" element={<HomePage />} />
-      <Route path="/search" element={<SearchPage />} />
+      <Route path="/video/:id" element={<VideoDetailPage />} />
     </Routes>
   )
 }
