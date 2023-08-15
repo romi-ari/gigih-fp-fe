@@ -11,8 +11,8 @@ import TopNav from '../components/Navbar/TopNav'
 function VideoDetailPage() {
     const params = useParams()
 
-    const getVideoUrl = 'http://localhost:8000/video-thumbnail/' + params.id
-    const getProductUrl = 'http://localhost:8000/product-list/' + params.id
+    const getVideoUrl = process.env.REACT_APP_URL + 'video-thumbnail/' + params.id
+    const getProductUrl = process.env.REACT_APP_URL + 'product-list/' + params.id
 
     const [video, setVideo] = useState({});
     const [products, setProducts] = useState([]);

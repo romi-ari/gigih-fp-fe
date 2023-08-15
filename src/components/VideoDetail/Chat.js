@@ -6,8 +6,8 @@ import axios from 'axios'
 function Chat({videoId}) {
     const formRef = useRef()
 
-    const commentUrl = 'http://localhost:8000/comment-list/' + videoId
-    const postCommentUrl = 'http://localhost:8000/comment/'
+    const commentUrl = process.env.REACT_APP_URL + 'comment-list/' + videoId
+    const postCommentUrl = process.env.REACT_APP_URL + 'comment/'
 
     const [comment, setComment] = useState([])
     const [username, setUsername] = useState("")

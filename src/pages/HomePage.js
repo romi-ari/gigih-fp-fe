@@ -1,16 +1,16 @@
 /*eslint-disable*/
 
 import React from 'react'
-import ListVideoCard from '../components/Cards/ListVideoCard';
+import ListVideoCard from '../components/Cards/ListVideoCard'
 import TopNav from '../components/Navbar/TopNav'
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 function HomePage() {
+ 
+    const baseUrl = process.env.REACT_APP_URL + "video-thumbnail-list"
 
-    const baseURL = "http://localhost:8000/video-thumbnail-list";
-
-    const [videos, setVideos] = useState([]);
+    const [videos, setVideos] = useState([])
 
     function renderVideosResults() {
         return (
@@ -26,16 +26,16 @@ function HomePage() {
                     ))
                 }
             </>
-        );
+        )
     }
 
     useEffect(() => {
-        axios.get(baseURL)
+        axios.get(baseUrl)
             .then((response) => {
-                setVideos(response.data.data.video);
+                setVideos(response.data.data.video)
             })
             .catch((error) => {
-                console.error('Error fetching videos:', error);
+                console.error('Error fetching videos:', error)
             });
     }, []);
 
