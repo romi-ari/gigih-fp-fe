@@ -9,6 +9,7 @@ import axios from 'axios'
 function HomePage() {
  
     const baseUrl = process.env.REACT_APP_URL + "video-thumbnail-list"
+    console.log(baseUrl)
 
     const [videos, setVideos] = useState([])
 
